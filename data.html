@@ -1,0 +1,377 @@
+<div class="menu cid-qz9tRdPZ8y" once="menu" id="menu4-12" data-rv-view="953">
+  <nav class="navbar navbar-dropdown align-items-center navbar-fixed-top navbar-toggleable-sm bg-color transparent">
+    <div class="menu-bottom">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav nav-dropdown js-float-line navbar-nav-top-padding mr-auto" data-app-modern-menu="true">
+
+          <li class="nav-item" ng-show="vm.data.description != null">
+            <a class="nav-link link mbr-black text-warning  display-nav" href="index.html#features9-b">About</a>
+          </li>
+          <li class="nav-item" ng-show="vm.data.jobs != null">
+            <a class="nav-link link mbr-black text-warning  display-nav" href="index.html#table1-7">Jobs</a>
+          </li>
+          <li class="nav-item" ng-show="vm.data.photos !=null">
+            <a class="nav-link link mbr-black text-warning  display-nav" href="index.html#slider1-t">Office Space</a>
+          </li>
+          <li class="nav-item" ng-show="vm.data.culture != null">
+            <a class="nav-link link mbr-black text-warning  display-nav" href="index.html#features9-r">Culture</a>
+          </li>
+          <li class="nav-item" ng-show="vm.data.news != null">
+            <a class="nav-link link mbr-black text-warning  display-nav" href="index.html#features14-18">News</a>
+          </li>
+          <li class="nav-item" ng-show="vm.data.team != null">
+            <a class="nav-link link mbr-black text-warning  display-nav" href="index.html#testimonials-slider1-p">Team</a>
+          </li>
+          <li class="nav-item" ng-show="vm.data.benefits != null">
+            <a class="nav-link link mbr-black text-warning  display-nav" href="index.html#features2-c">Benefits</a></li>
+        </ul>
+        <div class="navbar-buttons mbr-section-btn p3">
+          <a class="btn btn-sm btn-primary display-4" href="https://www.hackertrail.com/app/register">Sign Up</a>
+          <a class="display-9" style="font-weight:600; color: black; margin-bottom:2px;" href="https://www.hackertrail.com/app/login">Already a member?</a>
+        </div>
+      </div>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </button>
+    </div>
+  </nav>
+</div>
+<div class="header3 cid-qyXrJ7KENl mbr-fullscreen mbr-parallax-background" id="header3-e" data-rv-view="869" ng-style="{'background-image': 'url(' + vm.data.cover + ')'}">
+  <div class="mbr-overlay" style="opacity: 0.5;">
+  </div>
+  <div class="container align-center">
+    <div class="row justify-content-center">
+      <div class="media-container-column mbr-white col-md-10 offset-md-1">
+        <h1 class="mbr-section-title mbr-bold pb-3 mbr-fonts-style display-1">{{vm.data.name}}</h1>
+        <div class="mbr-section-btn">
+          <a class="btn btn-md btn-bgr btn-primary display-4" href="index.html#table1-7">Explore Jobs<br></a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="features9 cid-qyXqNIQMo0 sc" id="features9-b" data-rv-view="872">
+  <div class="container">
+    <div class="container align-center">
+      <img ng-src="{{vm.data.logo}}" style="padding:2rem; width:256px">
+      <h3 class="mbr-section-subtitle mbr-fonts-style mb-4 mbr-light display-5" ng-bind-html="vm.data.description"></h3>
+    </div>
+  </div>
+</section>
+
+<section class="section-table cid-qyXpXflzFJ sc" id="table1-7" data-rv-view="875">
+  <div class=" container">
+    <h2 class="mbr-section-title mbr-fonts-style align-center pb-3 display-1">
+      Open <strong>Jobs</strong></h2>
+    <div class="table-wrapper">
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Job Title</th>
+              <th>Salary</th>
+              <th>Location</th>
+              <th style="visibility:hidden">Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="job in vm.data.jobs">
+              <td style="width:45%">{{job.title}}</td>
+              <td>{{job.salary_range}}</td>
+              <td>{{job.location}}</td>
+              <td class="btn btn-primary btn-sm">
+                <a style="color:white; visibility:visible" data-toggle="modal" data-target="#viewDetails" ng-click=viewDetails()>See Detail<a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+
+<!-- popup modal -->
+<div class="modal fade bd-example-modal-lg" id="viewDetails" tabindex="-1" aria-labelledby="viewDetailsLabel" aria-hidden="true" role="dialog" ng-repeat="jobDetail in vm.data.jobs">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" style="visibility: visible;">{{jobDetail.title}}</h5>
+        <button type="button" class="close" data-dismiss="modal" style="visibility: visible;" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="modal-body">
+        <h2 class="display-6" style="visibility: visible;">
+          Job Description
+        </h2>
+        <div class="display-8" ng-bind-html="jobDetail.description"></div>
+        <h1 class="display-6" style="visibility: visible;">
+          Job Requirement
+        </h1>
+        <div class="display-8" ng-bind-html="jobDetail.requirements"></div>
+      </div>
+      <div class="modal-footer" style="visibility: visible;">
+        <button type="button" style="visibility: visible;" class="display-8 btn btn-primary btn-sm">Apply Now!</button>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+
+<!-- office space -->
+<section ng-show="vm.data.photos != null" class="carousel slide cid-qz8aSZEdh6" data-interval="false" id="slider1-t" data-rv-view="921">
+  <div class="full-screen">
+    <div class="mbr-slider slide carousel" data-pause="true" data-keyboard="false" data-ride="false" data-interval="false">
+      <ol class="carousel-indicators">
+        <li data-app-prevent-settings="" data-target="#slider1-t" class=" active" data-slide-to="0"></li>
+        <li data-app-prevent-settings="" data-target="#slider1-t" data-slide-to="1"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="carousel-item slider-fullscreen-image active" data-bg-video-slide="false" style="background-image: url(assets/images/t1.jpg);">
+          <div class="container container-slide">
+            <div class="image_wrapper">
+              <div class="mbr-overlay"></div><img src="assets/images/t1.jpg">
+              <div class="carousel-caption justify-content-center">
+                <div class="col-10 align-center">
+                  <h2 class="mbr-fonts-style display-1">{{vm.data.photos[0].title}}</h2>
+                  <p class="lead mbr-text mbr-fonts-style display-5">
+                    {{vm.data.photos[0].subtitle}}
+                    </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item slider-fullscreen-image" data-bg-video-slide="false" style="background-image: url(assets/images/t2.jpg);">
+          <div class="container container-slide">
+            <div class="image_wrapper">
+              <div class="mbr-overlay" style="opacity: 0.6;"></div>
+              <img src="assets/images/t2.jpg">
+              <div class="carousel-caption justify-content-center">
+                <div class="col-10 align-right">
+                  <h2 class="mbr-fonts-style display-1">{{vm.data.photos[1].title}}</h2>
+                  <p class="lead mbr-text mbr-fonts-style display-5">
+                    {{vm.data.photos[1].subtitle}}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+</section>
+
+
+
+<!-- office space
+<section ng-show="vm.data.photos != null" class="carousel slide cid-qz8aSZEdh6" data-interval="false" id="slider1-t" data-rv-view="921">
+  <div class="full-screen">
+      <div class="carousel-inner">
+        <div class="carousel-item active" ng-repeat="office in vm.data.photos" interval="myInterval">
+              <img ng-src="{{office.image}}" ng-hide="!isCurrentSlideIndex($index)">
+              <div class="carousel-caption justify-content-center">
+                <div class="col-10 align-center">
+                  <h2 class="mbr-fonts-style display-1">{{office.title}}</h2>
+                  <p class="lead mbr-text mbr-fonts-style display-5">
+                    {{office.subtitle}}</p>
+                </div>
+              </div>
+        </div>
+      </div>
+    </div>
+</section> -->
+
+<!-- company culture -->
+<section ng-show="vm.data.culture !=null" class="features9 cid-qyXYKRZhO8 sc" id="features9-r" data-rv-view="933">
+  <div class="container">
+    <div class="container align-center">
+      <h2 class="mb-4 mbr-fonts-style display-1">Company <strong>Culture</strong></h2>
+      <h3 class="mbr-section-subtitle mbr-fonts-style align-left mb-4 mbr-light display-5" ng-bind-html="vm.data.culture">
+      </h3>
+    </div>
+  </div>
+</section>
+
+
+<!-- company videos -->
+<section ng-show="vm.data.video !=null" class="header8 cid-qzeb925oAN mbr-fullscreen mbr-parallax-background sc" id="header8-14" data-rv-view="343">
+  <div class="mbr-overlay" style="opacity: 0.7; background-color: rgb(29, 38, 113);">
+  </div>
+
+  <div class="container align-center">
+    <div class="row justify-content-center">
+      <div class="media-container-column mbr-white col-md-10 offset-md-1">
+        <h1 class="mbr-section-title align-center py-2 mbr-fonts-style display-1">
+            Like What <strong>We Offer?</strong>
+        </h1>
+        <p class="mbr-text align-center py-2 mbr-fonts-style display-5">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        </p>
+        <div class="mbr-media show-modal align-center py-2" data-modal=".modalWindow">
+          <span class="mbri-play mbr-iconfont" media-simple="true"></span>
+        </div>
+        <div class="icon-description align-center pb-3 mbr-fonts-style display-7">
+          Watch s
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div>
+
+    <div class="modalWindow" style="display: none;">
+      <div class="modalWindow-container">
+        <div class="modalWindow-video-container">
+          <div class="modalWindow-video">
+            <iframe width="100%" height="100%" frameborder="0" allowfullscreen="1" data-src="https://www.youtube.com/watch?v=E0Pa8tYo94U"></iframe>
+          </div>
+          <a class="close" role="button" data-dismiss="modal" style="visibility:visible">
+                    <span aria-hidden="true" class="mbri-close mbr-iconfont closeModal"></span>
+                    <span class="sr-only">Close</span>
+                </a>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+
+<!-- public relation, in the news -->
+<section ng-show="vm.data.news !=null" class="features14 cid-qzfC29weQ8 sc" id="features14-18" data-rv-view="441">
+  <div class="container">
+    <h2 class="mbr-section-title mbr-fonts-style align-center pb-3 display-1">
+      In the <strong>News</strong></h2>
+    <div class="media-container-row">
+      <div class="card-item p-3 col-12 col-md-6 col-lg-4" ng-repeat="new in vm.data.news">
+        <div class="card-box">
+          <h4 class="card-title mbr-fonts-style mbr-bold display-7">
+                    <strong>{{new.title}}</strong>
+                </h4>
+          <p class="mbr-text mbr-fonts-style display-7"><a href="{{new.article_url}}">Read article!</a>
+          </p>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+
+<!-- compay team -->
+<section ng-show="vm.data.team !=null" class="carousel slide testimonials-slider cid-qyXVoChDhY sc" id="testimonials-slider1-p" data-rv-view="939">
+  <div class="container text-center">
+    <h2 class="pb-5 mbr-fonts-style display-1">
+        Company <strong>Team</strong></h2>
+    <div class="carousel slide" data-ride="carousel" role="listbox">
+      <div class="carousel-inner">
+        <div class="carousel-item">
+          <div class="user col-md-8">
+            <div class="user_image">
+              <img src="assets/images/08.jpg" media-simple="true">
+            </div>
+            <div class="user_text pb-3">
+              <p class="mbr-fonts-style display-5">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae nostrum, quos voluptas fugiat blanditiis, temporibus expedita cumque doloribus ea, officiis consequuntur repellat minus ad veritatis? Facere similique accusamus, accusantium sunt!
+              </p>
+            </div>
+            <div class="user_name mbr-bold pb-2 mbr-fonts-style display-7">
+              Helen Mary
+            </div>
+            <div class="user_desk mbr-light mbr-fonts-style display-7">
+              Designer
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="user col-md-8">
+            <div class="user_image">
+              <img src="assets/images/11.jpg" media-simple="true">
+            </div>
+            <div class="user_text pb-3">
+              <p class="mbr-fonts-style display-5">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae nostrum, quos voluptas fugiat blanditiis, temporibus expedita cumque doloribus ea, officiis consequuntur repellat minus ad veritatis? Facere similique accusamus, accusantium sunt!
+              </p>
+            </div>
+            <div class="user_name mbr-bold pb-2 mbr-fonts-style display-7">
+              Patrick James
+            </div>
+            <div class="user_desk mbr-light mbr-fonts-style display-7">
+              Developer
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-controls">
+        <a class="carousel-control-prev" role="button" data-slide="prev">
+              <span aria-hidden="true" class="mbri-arrow-prev mbr-iconfont"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+
+        <a class="carousel-control-next" role="button" data-slide="next">
+              <span aria-hidden="true" class="mbri-arrow-next mbr-iconfont"></span>
+              <span class="sr-only">Next</span>
+            </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!--   company benefits -->
+<section ng-show="vm.data.benefits !=null" class="features2 cid-qyXrlBmqoE sc" id="features2-c" data-rv-view="947">
+  <div class="container-fluid" style="width: 75%">
+    <h2 class="mbr-section-title mbr-fonts-style align-center pb-3 display-1">
+      Company <strong>Benefits</strong></h2>
+
+    <!--   put ng-repeat here -->
+    <div class="media-container-row">
+      <div class="card p-3 col-12 col-md-6 my-col" ng-repeat="benefit in vm.data.benefits">
+        <div class="card-img pb-5">
+
+          <!-- todo ng-class:benefits-->
+          <span ng-class="{
+           'imind-family-sign mbr-iconfont':benefit.icon ==6,
+           'icon54-v4-thumbs-up mbr-iconfontt':benefit.icon===9,
+           'icon54-v4-heart mbr-iconfont':benefit.icon===15,
+           }" style="font-size: 50px; color: rgb(255, 255, 255);" media-simple="true"></span>
+        </div>
+        <div class="card-box">
+          <h4 class="card-title mbr-fonts-style display-7">{{benefit.title}}</h4>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- social media -->
+<section class="cid-qyXpWRtbdr sc" id="social-buttons2-6" data-rv-view="950">
+  <div class="container">
+    <div class="media-container-row pt-3">
+      <h2 class="pb-3 mbr-section-title mbr-fonts-style display-3">
+            Share this page with your peers!</h2>
+      <div>
+        <div class="mbr-social-likes align-items-center">
+          <span style="visibility:hidden;" class="btn btn-social socicon-bg-facebook facebook mx-2" title="Share link on Facebook">
+                </span>
+
+          <span class="btn btn-social socicon-bg-facebook facebook mx-2" title="Share link on Facebook">
+                                <i class="socicon socicon-facebook"></i>
+                            </span>
+          <span class="btn btn-social twitter socicon-bg-twitter mx-2" title="Share link on Twitter">
+                  <i class="socicon socicon-twitter"></i>
+                </span>
+          <span class="btn btn-social plusone socicon-bg-googleplus mx-2" title="Share link on Google+">
+                    <i class="socicon socicon-googleplus"></i>
+        </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
