@@ -10,19 +10,15 @@
       init = function() {
         vm.data = CompanyData;
         vm.today = new Date();
-        vm.currentIndex = 0;
-        vm.myInterval = 3000;
-
-
-        vm.setCurrentSlideIndex = function(index) {
-          vm.currentIndex = index;
-        };
-        vm.isCurrentSlideIndex = function(index) {
-          return vm.currentIndex === index;
-        };
       };
       init();
+
+      vm.selectJob = function(job) {
+        vm.selectedJob = job
+      };
     };
+
+
     return angular.module('microApp').controller('MainController', MainController);
   })();
 

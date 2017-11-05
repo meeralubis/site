@@ -4,25 +4,25 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav nav-dropdown js-float-line navbar-nav-top-padding mr-auto" data-app-modern-menu="true">
 
-          <li class="nav-item" ng-show="vm.data.description != null">
+          <li class="nav-item" ng-if="!vm.data.description.length ==0">
             <a class="nav-link link mbr-black text-warning  display-nav" href="index.html#features9-b">About</a>
           </li>
-          <li class="nav-item" ng-show="vm.data.jobs != null">
+          <li class="nav-item" ng-if="!vm.data.jobs.length ==0">
             <a class="nav-link link mbr-black text-warning  display-nav" href="index.html#table1-7">Jobs</a>
           </li>
-          <li class="nav-item" ng-show="vm.data.photos !=null">
+          <li class="nav-item" ng-if="!vm.data.photos.length ==0">
             <a class="nav-link link mbr-black text-warning  display-nav" href="index.html#slider1-t">Office Space</a>
           </li>
-          <li class="nav-item" ng-show="vm.data.culture != null">
+          <li class="nav-item" ng-if="!vm.data.culture.length ==0">
             <a class="nav-link link mbr-black text-warning  display-nav" href="index.html#features9-r">Culture</a>
           </li>
-          <li class="nav-item" ng-show="vm.data.news != null">
+          <li class="nav-item" ng-if="!vm.data.news.length ==0">
             <a class="nav-link link mbr-black text-warning  display-nav" href="index.html#features14-18">News</a>
           </li>
-          <li class="nav-item" ng-show="vm.data.team != null">
+          <li class="nav-item" ng-if="!vm.data.members.length ==0">
             <a class="nav-link link mbr-black text-warning  display-nav" href="index.html#testimonials-slider1-p">Team</a>
           </li>
-          <li class="nav-item" ng-show="vm.data.benefits != null">
+          <li class="nav-item" ng-if="!vm.data.benefits.length ==0">
             <a class="nav-link link mbr-black text-warning  display-nav" href="index.html#features2-c">Benefits</a></li>
         </ul>
         <div class="navbar-buttons mbr-section-btn p3">
@@ -85,7 +85,7 @@
               <td>{{job.salary_range}}</td>
               <td>{{job.location}}</td>
               <td class="btn btn-primary btn-sm">
-                <a style="color:white; visibility:visible" data-toggle="modal" data-target="#viewDetails" ng-click=viewDetails()>See Detail<a></td>
+                <a style="color:white; visibility:visible" data-toggle="modal" data-target="#viewDetails" ng-click="vm.selectJob(job)">See Detail<a></td>
             </tr>
           </tbody>
         </table>
@@ -95,22 +95,24 @@
 
 
 <!-- popup modal -->
-<div class="modal fade bd-example-modal-lg" id="viewDetails" tabindex="-1" aria-labelledby="viewDetailsLabel" aria-hidden="true" role="dialog" ng-repeat="jobDetail in vm.data.jobs">
+<div class="modal fade bd-example-modal-lg" id="viewDetails" tabindex="-1" aria-labelledby="viewDetailsLabel" aria-hidden="true" role="dialog">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" style="visibility: visible;">{{jobDetail.title}}</h5>
-        <button type="button" class="close" data-dismiss="modal" style="visibility: visible;" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h5 class="modal-title" ng-model="selectedJob" style="visibility: visible;">{{vm.selectedJob.title}}</h5>
+        <button type="button" class="close" data-dismiss="modal" style="visibility: visible;" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
       </div>
       <div class="modal-body">
-        <h2 class="display-6" style="visibility: visible;">
+        <h2 class="display-6" ng-model="selectedJob" style="visibility: visible;">
           Job Description
         </h2>
-        <div class="display-8" ng-bind-html="jobDetail.description"></div>
+        <div class="display-8" ng-model="selectedJob" ng-bind-html="vm.selectedJob.description"></div>
         <h1 class="display-6" style="visibility: visible;">
           Job Requirement
         </h1>
-        <div class="display-8" ng-bind-html="jobDetail.requirements"></div>
+        <div class="display-8" ng-model="selectedJob" ng-bind-html="vm.selectedJob.requirements"></div>
       </div>
       <div class="modal-footer" style="visibility: visible;">
         <button type="button" style="visibility: visible;" class="display-8 btn btn-primary btn-sm">Apply Now!</button>
@@ -121,74 +123,66 @@
 </section>
 
 <!-- office space -->
-<section ng-show="vm.data.photos != null" class="carousel slide cid-qz8aSZEdh6" data-interval="false" id="slider1-t" data-rv-view="921">
+<section ng-if="!vm.data.photos.length==0" class="carousel slide cid-qz8aSZEdh6" data-interval="false" id="slider1-t" data-rv-view="921">
   <div class="full-screen">
     <div class="mbr-slider slide carousel" data-pause="true" data-keyboard="false" data-ride="false" data-interval="false">
       <ol class="carousel-indicators">
         <li data-app-prevent-settings="" data-target="#slider1-t" class=" active" data-slide-to="0"></li>
         <li data-app-prevent-settings="" data-target="#slider1-t" data-slide-to="1"></li>
+        <li data-app-prevent-settings="" data-target="#slider1-t" data-slide-to="2"></li>
       </ol>
       <div class="carousel-inner" role="listbox">
-        <div class="carousel-item slider-fullscreen-image active" data-bg-video-slide="false" style="background-image: url(assets/images/t1.jpg);">
+        <div class="carousel-item slider-fullscreen-image active" data-bg-video-slide="false" style="background-image: url(assets/images/1.jpg);">
           <div class="container container-slide">
             <div class="image_wrapper">
-              <div class="mbr-overlay"></div><img src="assets/images/t1.jpg">
+              <div class="mbr-overlay"></div><img src="assets/images/1.jpg">
               <div class="carousel-caption justify-content-center">
                 <div class="col-10 align-center">
-                  <h2 class="mbr-fonts-style display-1">{{vm.data.photos[0].title}}</h2>
-                  <p class="lead mbr-text mbr-fonts-style display-5">
-                    {{vm.data.photos[0].subtitle}}
-                    </p>
+                  <h2 class="mbr-fonts-style display-1">FULL SCREEN SLIDER</h2>
+                  <p class="lead mbr-text mbr-fonts-style display-5">Choose from the large selection of latest pre-made blocks - jumbotrons, hero images, parallax scrolling, video backgrounds, hamburger menu, sticky header and more.</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
-        <div class="carousel-item slider-fullscreen-image" data-bg-video-slide="false" style="background-image: url(assets/images/t2.jpg);">
+        <div class="carousel-item slider-fullscreen-image" data-bg-video-slide="https://www.youtube.com/watch?v=fwkKc6M60-0">
+          <div class="mbr-overlay"></div>
+          <div class="container container-slide">
+            <div class="image_wrapper"><img src="assets/images/2.jpg" style="opacity: 0;">
+              <div class="carousel-caption justify-content-center">
+                <div class="col-10 align-left">
+                  <h2 class="mbr-fonts-style display-1">VIDEO SLIDE</h2>
+                  <p class="lead mbr-text mbr-fonts-style display-5">Slide with youtube video background and color overlay. Title and text are aligned to the left.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item slider-fullscreen-image" data-bg-video-slide="false" style="background-image: url(assets/images/3.jpg);">
           <div class="container container-slide">
             <div class="image_wrapper">
-              <div class="mbr-overlay" style="opacity: 0.6;"></div>
-              <img src="assets/images/t2.jpg">
+              <div class="mbr-overlay" style="opacity: 0.6;"></div><img src="assets/images/3.jpg">
               <div class="carousel-caption justify-content-center">
                 <div class="col-10 align-right">
-                  <h2 class="mbr-fonts-style display-1">{{vm.data.photos[1].title}}</h2>
-                  <p class="lead mbr-text mbr-fonts-style display-5">
-                    {{vm.data.photos[1].subtitle}}
-                  </p>
+                  <h2 class="mbr-fonts-style display-1">IMAGE SLIDE</h2>
+                  <p class="lead mbr-text mbr-fonts-style display-5">Choose from the large selection of latest pre-made blocks - jumbotrons, hero images, parallax scrolling, video backgrounds, hamburger menu, sticky header and more.</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+      <a data-app-prevent-settings="" class="carousel-control carousel-control-prev" role="button" data-slide="prev" href="#slider1-t"><span aria-hidden="true" class="mbri-left mbr-iconfont"></span><span class="sr-only" onkeyup="">Previous</span></a>
+                <a data-app-prevent-settings="" class="carousel-control carousel-control-next" role="button" data-slide="next" href="#slider1-t"><span aria-hidden="true" class="mbri-right mbr-iconfont"></span><span class="sr-only">Next</span></a>
+      </div>
     </div>
 
 </section>
 
 
 
-<!-- office space
-<section ng-show="vm.data.photos != null" class="carousel slide cid-qz8aSZEdh6" data-interval="false" id="slider1-t" data-rv-view="921">
-  <div class="full-screen">
-      <div class="carousel-inner">
-        <div class="carousel-item active" ng-repeat="office in vm.data.photos" interval="myInterval">
-              <img ng-src="{{office.image}}" ng-hide="!isCurrentSlideIndex($index)">
-              <div class="carousel-caption justify-content-center">
-                <div class="col-10 align-center">
-                  <h2 class="mbr-fonts-style display-1">{{office.title}}</h2>
-                  <p class="lead mbr-text mbr-fonts-style display-5">
-                    {{office.subtitle}}</p>
-                </div>
-              </div>
-        </div>
-      </div>
-    </div>
-</section> -->
-
 <!-- company culture -->
-<section ng-show="vm.data.culture !=null" class="features9 cid-qyXYKRZhO8 sc" id="features9-r" data-rv-view="933">
+<section ng-if="!vm.data.culture.length ==0" class="features9 cid-qyXYKRZhO8 sc" id="features9-r" data-rv-view="933">
   <div class="container">
     <div class="container align-center">
       <h2 class="mb-4 mbr-fonts-style display-1">Company <strong>Culture</strong></h2>
@@ -200,7 +194,7 @@
 
 
 <!-- company videos -->
-<section ng-show="vm.data.video !=null" class="header8 cid-qzeb925oAN mbr-fullscreen mbr-parallax-background sc" id="header8-14" data-rv-view="343">
+<section ng-if="!vm.data.videos.length ==0" class="header8 cid-qzeb925oAN mbr-fullscreen mbr-parallax-background sc" id="header8-14" data-rv-view="343">
   <div class="mbr-overlay" style="opacity: 0.7; background-color: rgb(29, 38, 113);">
   </div>
 
@@ -235,14 +229,14 @@
                     <span aria-hidden="true" class="mbri-close mbr-iconfont closeModal"></span>
                     <span class="sr-only">Close</span>
                 </a>
+        </div>
       </div>
     </div>
-  </div>
   </div>
 </section>
 
 <!-- public relation, in the news -->
-<section ng-show="vm.data.news !=null" class="features14 cid-qzfC29weQ8 sc" id="features14-18" data-rv-view="441">
+<section ng-if="!vm.data.news.length ==0" class="features14 cid-qzfC29weQ8 sc" id="features14-18" data-rv-view="441">
   <div class="container">
     <h2 class="mbr-section-title mbr-fonts-style align-center pb-3 display-1">
       In the <strong>News</strong></h2>
@@ -263,7 +257,7 @@
 </section>
 
 <!-- compay team -->
-<section ng-show="vm.data.team !=null" class="carousel slide testimonials-slider cid-qyXVoChDhY sc" id="testimonials-slider1-p" data-rv-view="939">
+<section ng-if="!vm.data.members.length==0" class="carousel slide testimonials-slider cid-qyXVoChDhY sc" id="testimonials-slider1-p" data-rv-view="939">
   <div class="container text-center">
     <h2 class="pb-5 mbr-fonts-style display-1">
         Company <strong>Team</strong></h2>
@@ -324,7 +318,7 @@
 
 
 <!--   company benefits -->
-<section ng-show="vm.data.benefits !=null" class="features2 cid-qyXrlBmqoE sc" id="features2-c" data-rv-view="947">
+<section ng-if="!vm.data.benefits.length ==0" class="features2 cid-qyXrlBmqoE sc" id="features2-c" data-rv-view="947">
   <div class="container-fluid" style="width: 75%">
     <h2 class="mbr-section-title mbr-fonts-style align-center pb-3 display-1">
       Company <strong>Benefits</strong></h2>
