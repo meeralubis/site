@@ -123,7 +123,7 @@
 </section>
 
 <!-- office space -->
-<section ng-if="!vm.data.photos.length==0" class="carousel slide cid-qz8aSZEdh6" data-interval="false" id="slider1-t" data-rv-view="921">
+<section ng-show="vm.data.photos != null" class="carousel slide cid-qz8aSZEdh6" data-interval="false" id="slider1-t" data-rv-view="921">
   <div class="full-screen">
     <div class="mbr-slider slide carousel" data-pause="true" data-keyboard="false" data-ride="false" data-interval="false">
       <ol class="carousel-indicators">
@@ -172,8 +172,8 @@
           </div>
         </div>
       </div>
-      <a data-app-prevent-settings="" class="carousel-control carousel-control-prev" role="button" data-slide="prev" href="index.html#slider1-t"><span aria-hidden="true" class="mbri-left mbr-iconfont"></span><span class="sr-only" onkeyup="">Previous</span></a>
-                <a data-app-prevent-settings="" class="carousel-control carousel-control-next" role="button" data-slide="next" href="index.html#slider1-t"><span aria-hidden="true" class="mbri-right mbr-iconfont"></span><span class="sr-only">Next</span></a>
+      <a data-app-prevent-settings="" class="carousel-control carousel-control-prev" role="button" data-slide="prev" data-target="#slider1-t"><span aria-hidden="true" class="mbri-left mbr-iconfont"></span><span class="sr-only" onkeyup="">Previous</span></a>
+                <a data-app-prevent-settings="" class="carousel-control carousel-control-next" role="button" data-slide="next" data-target="#slider1-t"><span aria-hidden="true" class="mbri-right mbr-iconfont"></span><span class="sr-only">Next</span></a>
       </div>
     </div>
 
