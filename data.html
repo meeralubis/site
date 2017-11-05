@@ -126,46 +126,31 @@
 <section ng-show="vm.data.photos != null" class="carousel slide cid-qz8aSZEdh6" data-interval="false" id="slider1-t" data-rv-view="921">
   <div class="full-screen">
     <div class="mbr-slider slide carousel" data-pause="true" data-keyboard="false" data-ride="false" data-interval="false">
-      <ol class="carousel-indicators">
-        <li data-app-prevent-settings="" data-target="#slider1-t" class=" active" data-slide-to="0"></li>
-        <li data-app-prevent-settings="" data-target="#slider1-t" data-slide-to="1"></li>
-        <li data-app-prevent-settings="" data-target="#slider1-t" data-slide-to="2"></li>
-      </ol>
+
       <div class="carousel-inner" role="listbox">
-        <div class="carousel-item slider-fullscreen-image active" data-bg-video-slide="false" style="background-image: url(assets/images/1.jpg);">
+        <div class="carousel-item slider-fullscreen-image active" data-bg-video-slide="false" style="background-image: url(assets/images/t1.jpg);">
           <div class="container container-slide">
             <div class="image_wrapper">
-              <div class="mbr-overlay"></div><img src="assets/images/1.jpg">
+              <div class="mbr-overlay"></div>
               <div class="carousel-caption justify-content-center">
                 <div class="col-10 align-center">
-                  <h2 class="mbr-fonts-style display-1">FULL SCREEN SLIDER</h2>
-                  <p class="lead mbr-text mbr-fonts-style display-5">Choose from the large selection of latest pre-made blocks - jumbotrons, hero images, parallax scrolling, video backgrounds, hamburger menu, sticky header and more.</p>
+                  <h2 class="mbr-fonts-style display-1">{{vm.data.photos[0].title}}</h2>
+                  <p class="lead mbr-text mbr-fonts-style display-5">
+                    {{vm.data.photos[0].subtitle}}
+                  </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="carousel-item slider-fullscreen-image" data-bg-video-slide="https://www.youtube.com/watch?v=fwkKc6M60-0">
-          <div class="mbr-overlay"></div>
-          <div class="container container-slide">
-            <div class="image_wrapper"><img src="assets/images/2.jpg" style="opacity: 0;">
-              <div class="carousel-caption justify-content-center">
-                <div class="col-10 align-left">
-                  <h2 class="mbr-fonts-style display-1">VIDEO SLIDE</h2>
-                  <p class="lead mbr-text mbr-fonts-style display-5">Slide with youtube video background and color overlay. Title and text are aligned to the left.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item slider-fullscreen-image" data-bg-video-slide="false" style="background-image: url(assets/images/3.jpg);">
+        <div class="carousel-item slider-fullscreen-image" data-bg-video-slide="false" style="background-image: url(assets/images/t2.jpg);">
           <div class="container container-slide">
             <div class="image_wrapper">
-              <div class="mbr-overlay" style="opacity: 0.6;"></div><img src="assets/images/3.jpg">
+              <div class="mbr-overlay" style="opacity: 0.6;"></div>
               <div class="carousel-caption justify-content-center">
                 <div class="col-10 align-right">
-                  <h2 class="mbr-fonts-style display-1">IMAGE SLIDE</h2>
-                  <p class="lead mbr-text mbr-fonts-style display-5">Choose from the large selection of latest pre-made blocks - jumbotrons, hero images, parallax scrolling, video backgrounds, hamburger menu, sticky header and more.</p>
+                  <h2 class="mbr-fonts-style display-1">{{vm.data.photos[1].title}}</h2>
+                  <p class="lead mbr-text mbr-fonts-style display-5">{{vm.data.photos[1].subtitle}}</p>
                 </div>
               </div>
             </div>

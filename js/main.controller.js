@@ -11,7 +11,6 @@
       init = function() {
         vm.data = CompanyData;
         vm.today = new Date();
-        vm.myInterval = 5000;
         vm.selectJob = function(job) {
           vm.selectedJob = job
         };
