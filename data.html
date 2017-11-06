@@ -1,9 +1,9 @@
-<div class="menu cid-qz9tRdPZ8y" once="menu" id="menu4-12" data-rv-view="953">
+<!-- menubar -->
+<section class="menu cid-qz9tRdPZ8y" once="menu" id="menu4-12" data-rv-view="953">
   <nav class="navbar navbar-dropdown align-items-center navbar-fixed-top navbar-toggleable-sm bg-color transparent">
     <div class="menu-bottom">
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav nav-dropdown js-float-line navbar-nav-top-padding mr-auto" data-app-modern-menu="true">
-
           <li class="nav-item" ng-if="!vm.data.description.length ==0">
             <a class="nav-link link mbr-black text-warning  display-nav" href="index.html#features9-b">About</a>
           </li>
@@ -40,8 +40,9 @@
         </button>
     </div>
   </nav>
-</div>
-<div class="header3 cid-qyXrJ7KENl mbr-fullscreen mbr-parallax-background" id="header3-e" data-rv-view="869" ng-style="{'background-image': 'url(' + vm.data.cover + ')'}">
+</section>
+<!-- company cover -->
+<section class="header3 cid-qyXrJ7KENl mbr-fullscreen mbr-parallax-background" id="header3-e" data-rv-view="869" ng-style="{'background-image': 'url(' + vm.data.cover + ')'}">
   <div class="mbr-overlay" style="opacity: 0.5;">
   </div>
   <div class="container align-center">
@@ -49,13 +50,15 @@
       <div class="media-container-column mbr-white col-md-10 offset-md-1">
         <h1 class="mbr-section-title mbr-bold pb-3 mbr-fonts-style display-1">{{vm.data.name}}</h1>
         <div class="mbr-section-btn">
-          <a class="btn btn-md btn-bgr btn-primary display-4" href="index.html#table1-7">Explore Jobs<br></a></div>
+          <a class="btn btn-md btn-bgr btn-primary display-4" href="index.html#table1-7">Explore Jobs<br></a>
+        </div>
       </div>
     </div>
   </div>
-</div>
+</section>
 
-<section class="features9 cid-qyXqNIQMo0 sc" id="features9-b" data-rv-view="872">
+<!-- company info -->
+<section class="sc features9 cid-qyXqNIQMo0" id="features9-b" data-rv-view="872">
   <div class="container">
     <div class="container align-center">
       <img ng-src="{{vm.data.logo}}" style="padding:2rem; width:256px">
@@ -64,7 +67,8 @@
   </div>
 </section>
 
-<section class="section-table cid-qyXpXflzFJ sc" id="table1-7" data-rv-view="875">
+<!-- open jobs -->
+<section class="sc section-table cid-qyXpXflzFJ" id="table1-7" data-rv-view="875">
   <div class=" container">
     <h2 class="mbr-section-title mbr-fonts-style align-center pb-3 display-1">
       Open <strong>Jobs</strong></h2>
@@ -125,8 +129,7 @@
 <!-- office space -->
 <section ng-if="!vm.data.photos.length==0" class="carousel slide cid-qz8aSZEdh6"  id="slider1-t">
   <div class="full-screen">
-    <div class="mbr-slider slide carousel">
-
+  <div class="mbr-slider slide carousel">
  <div class="carousel-inner" role="listbox">
    <div class="carousel-item active">
      <div class="mbr-overlay" style="opacity: 0.4;"></div>
@@ -155,11 +158,11 @@
         <span class="sr-only">Next</span>
       </a>
       </div>
-
+    </div>
 </section>
 
 <!-- company culture -->
-<section ng-if="!vm.data.culture.length ==0" class="features9 cid-qyXYKRZhO8 sc" id="features9-r" data-rv-view="933">
+<section ng-if="!vm.data.culture.length ==0" class="sc features9 cid-qyXYKRZhO8" id="features9-r" data-rv-view="933">
   <div class="container">
     <div class="container align-center">
       <h2 class="mb-4 mbr-fonts-style display-1">Company <strong>Culture</strong></h2>
@@ -170,8 +173,31 @@
 </section>
 
 
+
+
+<!-- public relation, in the news -->
+<section ng-if="!vm.data.news.length ==0" class="sc features14 cid-qzfC29weQ8" id="features14-18" data-rv-view="441">
+  <div class="container">
+    <h2 class="mbr-section-title mbr-fonts-style align-center pb-3 display-1">
+      In the <strong>News</strong></h2>
+    <div class="media-container-row">
+      <div class="card-item p-3 col-12 col-md-6 col-lg-4" ng-repeat="new in vm.data.news">
+        <div class="card-box">
+          <h4 class="card-title mbr-fonts-style mbr-bold display-7">
+                    <strong>{{new.title}}</strong>
+                </h4>
+          <p class="mbr-text mbr-fonts-style display-7"><a href="{{new.article_url}}">Read article!</a>
+          </p>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+
 <!-- company videos -->
-<section ng-if="!vm.data.videos.length ==0" class="header8 cid-qzeb925oAN mbr-fullscreen mbr-parallax-background" id="header8-14" data-rv-view="343">
+<section class=" header8 cid-qzeb925oAN mbr-fullscreen mbr-parallax-background" id="header8-14" data-rv-view="343">
   <div class="mbr-overlay" style="opacity: 0.7; background-color: rgb(29, 38, 113);">
   </div>
 
@@ -211,30 +237,8 @@
   </div>
 
 </section>
-
-<!-- public relation, in the news -->
-<section ng-if="!vm.data.news.length ==0" class="features14 cid-qzfC29weQ8 sc" id="features14-18" data-rv-view="441">
-  <div class="container">
-    <h2 class="mbr-section-title mbr-fonts-style align-center pb-3 display-1">
-      In the <strong>News</strong></h2>
-    <div class="media-container-row">
-      <div class="card-item p-3 col-12 col-md-6 col-lg-4" ng-repeat="new in vm.data.news">
-        <div class="card-box">
-          <h4 class="card-title mbr-fonts-style mbr-bold display-7">
-                    <strong>{{new.title}}</strong>
-                </h4>
-          <p class="mbr-text mbr-fonts-style display-7"><a href="{{new.article_url}}">Read article!</a>
-          </p>
-        </div>
-      </div>
-
-
-    </div>
-  </div>
-</section>
-
 <!-- compay team -->
-<section ng-if="!vm.data.members.length==0" class="carousel slide testimonials-slider cid-qyXVoChDhY sc" id="testimonials-slider1-p" data-rv-view="939">
+<section ng-if="!vm.data.members.length==0" class="sc carousel slide testimonials-slider cid-qyXVoChDhY" id="testimonials-slider1-p" data-rv-view="939">
   <div class="container text-center">
     <h2 class="pb-5 mbr-fonts-style display-1">
         Company <strong>Team</strong></h2>
@@ -295,7 +299,7 @@
 
 
 <!--   company benefits -->
-<section ng-if="!vm.data.benefits.length ==0" class="features2 cid-qyXrlBmqoE sc" id="features2-c" data-rv-view="947">
+<section ng-if="!vm.data.benefits.length ==0" class="sc features2 cid-qyXrlBmqoE" id="features2-c" data-rv-view="947">
   <div class="container-fluid" style="width: 75%">
     <h2 class="mbr-section-title mbr-fonts-style align-center pb-3 display-1">
       Company <strong>Benefits</strong></h2>
@@ -329,7 +333,7 @@
 </section>
 
 <!-- social media -->
-<section class="cid-qyXpWRtbdr sc" id="social-buttons2-6" data-rv-view="950">
+<section class="sc cid-qyXpWRtbdr" id="social-buttons2-6" data-rv-view="950">
   <div class="container">
     <div class="media-container-row pt-3">
       <h2 class="pb-3 mbr-section-title mbr-fonts-style display-3">
@@ -353,3 +357,23 @@
     </div>
   </div>
 </section>
+
+
+<script src="assets/web/assets/jquery/jquery.min.js"></script>
+<script src="js/script.js"></script>
+<script src="assets/popper/popper.min.js"></script>
+<script src="assets/tether/tether.min.js"></script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/bootstrap-carousel-swipe/bootstrap-carousel-swipe.js"></script>
+<script src="assets/data-tables/jquery.data-tables.min.js"></script>
+<script src="assets/data-tables/data-tables.bootstrap4.min.js"></script>
+<script src="assets/smooth-scroll/smooth-scroll.js"></script>
+<script src="assets/jquery-mb-vimeo_player/jquery.mb.vimeo_player.js"></script>
+<script src="assets/jarallax/jarallax.min.js"></script>
+<script src="assets/social-likes/social-likes.js"></script>
+<script src="assets/dropdown/js/script.min.js"></script>
+<script src="assets/touch-swipe/jquery.touch-swipe.min.js"></script>
+<script src="assets/viewport-checker/jquery.viewportchecker.js"></script>
+<script src="assets/jquery-mb-ytplayer/jquery.mb.ytplayer.min.js"></script>
+<script src="assets/theme/js/script.js"></script>
+<script src="assets/mobirise-slider-video/script.js"></script>
