@@ -7,7 +7,6 @@
     MainController = function(CompanyData) {
       var init, vm;
       vm = this;
-
       init = function() {
         vm.data = CompanyData;
         vm.today = new Date();
@@ -15,7 +14,9 @@
         vm.selectJob = function(job) {
           vm.selectedJob = job
         };
+
       };
+
       init();
     };
 
