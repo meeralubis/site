@@ -3,13 +3,10 @@
   <nav class="navbar navbar-dropdown align-items-center navbar-fixed-top navbar-toggleable-sm bg-color transparent">
     <div class="menu-bottom">
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <a class="navbar-brand mt-2" href="">
+        <a class="navbar-brand mt-2" href="#">
           <img src="/assets/images/ht_logo.png" width="100%" height="20px" alt="">
         </a>
-
-        <!-- navbar -->
         <ul class="navbar-nav nav-dropdown js-float-line navbar-nav-top-padding mr-auto" data-app-modern-menu="true">
-
           <li class="nav-item" ng-if="!vm.data.description.length ==0">
             <a class="nav-link link mbr-black display-nav" href="index.html#features9-b">About</a>
           </li>
@@ -31,35 +28,34 @@
           <li class="nav-item" ng-if="!vm.data.members.length ==0">
             <a class="nav-link link mbr-black text-warning  display-nav" href="index.html#testimonials-slider1-p">Team</a>
           </li>
-
         </ul>
-        <!-- close navbar -->
         <div class="navbar-buttons mbr-section-btn p3">
           <a class="display-9" style="font-weight:600; color: black; margin-bottom:2px;" href="https://www.hackertrail.com/app/login">Already a member?</a>
         </div>
       </div>
+
+      <!-- <a class="btn btn-sm btn-primary display-4" href="https://www.hackertrail.com/app/register">Sign Up</a> -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <div class="hamburger">
+            <div class="hamburger">
                 <span></span>
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
         </button>
-      <a class="navbar-toggler display-4" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" href="https://www.hackertrail.com/app/register">Sign Up</a>
     </div>
   </nav>
 </section>
 <!-- company cover -->
-<section class="header3 cid-qyXrJ7KENl mbr-fullscreen mbr-parallax-background " id="header3-e " data-rv-view="869 " ng-style="{ 'background-image': 'url(' + vm.data.cover + ')'} ">
-  <div class="mbr-overlay " style="opacity: 0.5; ">
+<section class="header3 cid-qyXrJ7KENl mbr-fullscreen mbr-parallax-background" id="header3-e" data-rv-view="869" ng-style="{'background-image': 'url(' + vm.data.cover + ')'}">
+  <div class="mbr-overlay" style="opacity: 0.5;">
   </div>
-  <div class="container align-center ">
-    <div class="row justify-content-center ">
-      <div class="media-container-column mbr-white col-md-10 offset-md-1 ">
-        <h1 class="mbr-section-title mbr-bold pb-3 mbr-fonts-style display-1 ">{{vm.data.name}}</h1>
-        <div class="mbr-section-btn ">
-          <a class="btn btn-md btn-bgr btn-primary display-4 " href="index.html#table1-7 ">Explore Jobs<br></a>
+  <div class="container align-center">
+    <div class="row justify-content-center">
+      <div class="media-container-column mbr-white col-md-10 offset-md-1">
+        <h1 class="mbr-section-title mbr-bold pb-3 mbr-fonts-style display-1">{{vm.data.name}}</h1>
+        <div class="mbr-section-btn">
+          <a class="btn btn-md btn-bgr btn-primary display-4" href="index.html#table1-7">Explore Jobs<br></a>
         </div>
       </div>
     </div>
@@ -67,50 +63,45 @@
 </section>
 
 <!-- company info -->
-<section class="sc features9 cid-qyXqNIQMo0 " id="features9-b " data-rv-view="872 ">
-  <div class="container ">
-    <div class="container align-center ">
-      <img ng-src="{{vm.data.logo}} " style="padding:2rem; width:256px ">
-      <h3 class="mbr-section-subtitle align-left mbr-fonts-style mb-4 mbr-light display-5 " ng-bind-html="vm.data.description "></h3>
+<section class="sc features9 cid-qyXqNIQMo0" id="features9-b" data-rv-view="872">
+  <div class="container">
+    <div class="container align-center">
+      <img ng-src="{{vm.data.logo}}" style="padding:2rem; width:256px">
+      <h3 class="mbr-section-subtitle align-left mbr-fonts-style mb-4 mbr-light display-5" ng-bind-html="vm.data.description"></h3>
     </div>
   </div>
 </section>
 
 <!-- open jobs -->
-<section class="sc section-table cid-qyXpXflzFJ " id="table1-7 " data-rv-view="875 ">
-  <div class="container ">
-    <h2 class="mbr-section-title mbr-fonts-style align-center pb-3 display-1 ">
+<section class="sc section-table cid-qyXpXflzFJ" id="table1-7" data-rv-view="875">
+  <div class="container">
+    <h2 class="mbr-section-title mbr-fonts-style align-center pb-3 display-1">
       Open <strong>Jobs</strong></h2>
     <!-- input search location -->
-    <div class="input-group " style="width:96% !important ">
-      <span class="input-group-addon " style="border: none; padding:15px; ">
-        <span class="icon54-v4-search mbr-iconfont " style="font-size: 30px; color: black; "></span>
+    <div class="input-group" style="width:96% !important">
+      <span class="input-group-addon">
+        <span class="icon54-v4-search mbr-iconfont" style="font-size: 30px; color: black;"></span>
       </span>
-      <input type="text " ng-model="search.location " class="form-control " placeholder="Location ">
-
-
-      <!-- <input type="text " ng-model="search.location " class="form-control "> -->
-      </span>
-
+      <input type="text" ng-model="search.location" class="form-control" placeholder="Location">
     </div>
-    <div class="table-wrapper " style="padding-top:30px ">
-      <div class="table-responsive ">
-        <table class="table ">
+    <div class="table-wrapper" style="padding-top:30px">
+      <div class="table-responsive">
+        <table class="table">
           <thead>
             <tr>
-              <th class="not-active ">Job Title</th>
-              <th class="not-active ">Salary</th>
-              <th class="not-active ">Location</th>
-              <th style="visibility:hidden ">Details</th>
+              <th class="not-active">Job Title</th>
+              <th class="not-active">Salary</th>
+              <th class="not-active">Location</th>
+              <th style="visibility:hidden">Details</th>
             </tr>
           </thead>
           <tbody>
-            <tr ng-repeat="job in vm.data.jobs | filter:search:strict ">
-              <td style="width:45% ">{{job.title}}</td>
+            <tr ng-repeat="job in vm.data.jobs | filter:search:strict">
+              <td style="width:45%">{{job.title}}</td>
               <td>{{job.salary_range}}</td>
               <td>{{job.location}}</td>
-              <td class="btn btn-primary btn-sm ">
-                <a style="color:white; visibility:visible " data-toggle="modal " data-target="#viewDetails " ng-click="vm.selectJob(job) ">See Detail<a></td>
+              <td class="btn btn-primary btn-sm">
+                <a style="color:white; visibility:visible" data-toggle="modal" data-target="#viewDetails" ng-click="vm.selectJob(job)">See Detail<a></td>
             </tr>
           </tbody>
         </table>
@@ -120,27 +111,27 @@
 
 
 <!-- popup modal -->
-<div class="modal fade bd-example-modal-lg " id="viewDetails " tabindex="-1 " aria-labelledby="viewDetailsLabel " aria-hidden="true " role="dialog ">
-  <div class="modal-dialog modal-lg ">
-    <div class="modal-content ">
-      <div class="modal-header ">
-        <h5 class="modal-title " ng-model="selectedJob " style="visibility: visible; ">{{vm.selectedJob.title}}</h5>
-        <button type="button " class="close " data-dismiss="modal " style="visibility: visible; " aria-label="Close ">
-          <span aria-hidden="true ">&times;</span>
+<div class="modal fade bd-example-modal-lg" id="viewDetails" tabindex="-1" aria-labelledby="viewDetailsLabel" aria-hidden="true" role="dialog">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" ng-model="selectedJob" style="visibility: visible;">{{vm.selectedJob.title}}</h5>
+        <button type="button" class="close" data-dismiss="modal" style="visibility: visible;" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
       </button>
     </div>
-    <div class="modal-body ">
-      <h2 class="display-6 " ng-model="selectedJob " style="visibility: visible; ">
+    <div class="modal-body">
+      <h2 class="display-6" ng-model="selectedJob" style="visibility: visible;">
           Job Description
         </h2>
-      <div class="display-8 " ng-model="selectedJob " ng-bind-html="vm.selectedJob.description "></div>
-      <h1 class="display-6 " style="visibility: visible; ">
+      <div class="display-8" ng-model="selectedJob" ng-bind-html="vm.selectedJob.description"></div>
+      <h1 class="display-6" style="visibility: visible;">
           Job Requirement
         </h1>
-      <div class="display-8 " ng-model="selectedJob " ng-bind-html="vm.selectedJob.requirements "></div>
+      <div class="display-8" ng-model="selectedJob" ng-bind-html="vm.selectedJob.requirements"></div>
     </div>
-    <div class="modal-footer " style="visibility: visible; ">
-      <button type="button " style="visibility: visible; " class="display-8 btn btn-primary btn-sm ">Apply Now!</button>
+    <div class="modal-footer" style="visibility: visible;">
+      <button type="button" style="visibility: visible;" class="display-8 btn btn-primary btn-sm">Apply Now!</button>
     </div>
   </div>
   </div>
@@ -148,47 +139,47 @@
 </section>
 
 <!-- office space -->
-<section ng-if="!vm.data.photos.length==0 " class="carousel slide cid-qz8aSZEdh6 " id="slider1-t ">
-  <div class="full-screen ">
-    <div class="mbr-slider slide carousel ">
-      <div class="carousel-inner " role="listbox ">
-        <div class="carousel-item active ">
-          <div class="mbr-overlay " style="opacity: 0.4; "></div>
-          <!-- <img class="d-block img-fluid " style="width:100% " src="assets/images/t1.jpg " alt="First slide "> -->
-          <img class="d-block img-fluid " style="width:100% " ng-src="{{vm.data.photos[0].image}} " alt="First slide ">
-          <div class="carousel-caption d-none d-md-block ">
+<section ng-if="!vm.data.photos.length==0" class="carousel slide cid-qz8aSZEdh6" id="slider1-t">
+  <div class="full-screen">
+    <div class="mbr-slider slide carousel">
+      <div class="carousel-inner" role="listbox">
+        <div class="carousel-item active">
+          <div class="mbr-overlay" style="opacity: 0.4;"></div>
+          <!-- <img class="d-block img-fluid" style="width:100%" src="assets/images/t1.jpg" alt="First slide"> -->
+          <img class="d-block img-fluid" style="width:100%" ng-src="{{vm.data.photos[0].image}}" alt="First slide">
+          <div class="carousel-caption d-none d-md-block">
             <h3>{{vm.data.photos[0].title}}</h3>
             <p>{{vm.data.photos[0].subtitle}}</p>
           </div>
         </div>
-        <div class="carousel-item ">
-          <div class="mbr-overlay " style="opacity: 0.4; "></div>
-          <!-- <img class="d-block img-fluid " style="width:100% " src="assets/images/t2.jpg " alt="Second slide "> -->
-          <img class="d-block img-fluid " style="width:100% " ng-src="{{vm.data.photos[1].image}} " alt="Second slide ">
-          <div class="carousel-caption d-none d-md-block ">
+        <div class="carousel-item">
+          <div class="mbr-overlay" style="opacity: 0.4;"></div>
+          <!-- <img class="d-block img-fluid" style="width:100%" src="assets/images/t2.jpg" alt="Second slide"> -->
+          <img class="d-block img-fluid" style="width:100%" ng-src="{{vm.data.photos[1].image}}" alt="Second slide">
+          <div class="carousel-caption d-none d-md-block">
             <h3>{{vm.data.photos[1].title}}</h3>
             <p>{{vm.data.photos[1].subtitle}}</p>
           </div>
         </div>
       </div>
-      <a class="carousel-control-prev " data-target="#slider1-t " role="button " data-slide="prev ">
-        <span class="carousel-control-prev-icon " aria-hidden="true "></span>
-        <span class="sr-only ">Previous</span>
+      <a class="carousel-control-prev" data-target="#slider1-t" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
       </a>
-                <a class="carousel-control-next " data-target="#slider1-t " role="button " data-slide="next ">
-        <span class="carousel-control-next-icon " aria-hidden="true "></span>
-        <span class="sr-only ">Next</span>
+                <a class="carousel-control-next" data-target="#slider1-t" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
       </a>
       </div>
     </div>
 </section>
 
 <!-- company culture -->
-<section ng-if="!vm.data.culture.length==0 " class="sc features9 cid-qyXYKRZhO8 " id="features9-r " data-rv-view="933 ">
-  <div class="container ">
-    <div class="container align-center ">
-      <h2 class="mb-4 mbr-fonts-style display-1 ">Company <strong>Culture</strong></h2>
-      <h3 class="mbr-section-subtitle mbr-fonts-style align-left mb-4 mbr-light display-5 " ng-bind-html="vm.data.culture ">
+<section ng-if="!vm.data.culture.length ==0" class="sc features9 cid-qyXYKRZhO8" id="features9-r" data-rv-view="933">
+  <div class="container">
+    <div class="container align-center">
+      <h2 class="mb-4 mbr-fonts-style display-1">Company <strong>Culture</strong></h2>
+      <h3 class="mbr-section-subtitle mbr-fonts-style align-left mb-4 mbr-light display-5" ng-bind-html="vm.data.culture">
       </h3>
     </div>
   </div>
@@ -198,59 +189,59 @@
 
 
 <!-- compay team -->
-<section ng-if="!vm.data.members.length==0 " class="sc carousel slide testimonials-slider cid-qyXVoChDhY " id="testimonials-slider1-p " data-rv-view="939 ">
-  <div class="container text-center ">
-    <h2 class="pb-5 mbr-fonts-style display-1 ">
+<section ng-if="!vm.data.members.length==0" class="sc carousel slide testimonials-slider cid-qyXVoChDhY" id="testimonials-slider1-p" data-rv-view="939">
+  <div class="container text-center">
+    <h2 class="pb-5 mbr-fonts-style display-1">
         Company <strong>Team</strong></h2>
-    <div class="carousel slide " data-ride="carousel " role="listbox ">
-      <div class="carousel-inner ">
-        <div class="carousel-item ">
-          <div class="user col-md-8 ">
-            <div class="user_image ">
-              <img src="assets/images/08.jpg " media-simple="true ">
+    <div class="carousel slide" data-ride="carousel" role="listbox">
+      <div class="carousel-inner">
+        <div class="carousel-item">
+          <div class="user col-md-8">
+            <div class="user_image">
+              <img src="assets/images/08.jpg" media-simple="true">
             </div>
-            <div class="user_text pb-3 ">
-              <p class="mbr-fonts-style display-5 ">
+            <div class="user_text pb-3">
+              <p class="mbr-fonts-style display-5">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae nostrum, quos voluptas fugiat blanditiis, temporibus expedita cumque doloribus ea, officiis consequuntur repellat minus ad veritatis? Facere similique accusamus, accusantium sunt!
               </p>
             </div>
-            <div class="user_name mbr-bold pb-2 mbr-fonts-style display-7 ">
+            <div class="user_name mbr-bold pb-2 mbr-fonts-style display-7">
               Helen Mary
             </div>
-            <div class="user_desk mbr-light mbr-fonts-style display-7 ">
+            <div class="user_desk mbr-light mbr-fonts-style display-7">
               Designer
             </div>
           </div>
         </div>
-        <div class="carousel-item ">
-          <div class="user col-md-8 ">
-            <div class="user_image ">
-              <img src="assets/images/11.jpg " media-simple="true ">
+        <div class="carousel-item">
+          <div class="user col-md-8">
+            <div class="user_image">
+              <img src="assets/images/11.jpg" media-simple="true">
             </div>
-            <div class="user_text pb-3 ">
-              <p class="mbr-fonts-style display-5 ">
+            <div class="user_text pb-3">
+              <p class="mbr-fonts-style display-5">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae nostrum, quos voluptas fugiat blanditiis, temporibus expedita cumque doloribus ea, officiis consequuntur repellat minus ad veritatis? Facere similique accusamus, accusantium sunt!
               </p>
             </div>
-            <div class="user_name mbr-bold pb-2 mbr-fonts-style display-7 ">
+            <div class="user_name mbr-bold pb-2 mbr-fonts-style display-7">
               Patrick James
             </div>
-            <div class="user_desk mbr-light mbr-fonts-style display-7 ">
+            <div class="user_desk mbr-light mbr-fonts-style display-7">
               Developer
             </div>
           </div>
         </div>
       </div>
 
-      <div class="carousel-controls ">
-        <a class="carousel-control-prev " role="button " data-slide="prev ">
-              <span aria-hidden="true " class="mbri-arrow-prev mbr-iconfont "></span>
-              <span class="sr-only ">Previous</span>
+      <div class="carousel-controls">
+        <a class="carousel-control-prev" role="button" data-slide="prev">
+              <span aria-hidden="true" class="mbri-arrow-prev mbr-iconfont"></span>
+              <span class="sr-only">Previous</span>
             </a>
 
-        <a class="carousel-control-next " role="button " data-slide="next ">
-              <span aria-hidden="true " class="mbri-arrow-next mbr-iconfont "></span>
-              <span class="sr-only ">Next</span>
+        <a class="carousel-control-next" role="button" data-slide="next">
+              <span aria-hidden="true" class="mbri-arrow-next mbr-iconfont"></span>
+              <span class="sr-only">Next</span>
             </a>
       </div>
     </div>
@@ -258,23 +249,23 @@
 </section>
 
 <!-- company videos -->
-<section ng-hide="vm.data.videos.length==0 " class="header8 cid-qzeb925oAN mbr-fullscreen mbr-parallax-background " id="header8-14 " data-rv-view="343 " ng-style="{ 'background-image': 'url(' + vm.data.videos[0].cover_url + ')'} ">
-  <div class="mbr-overlay " style="opacity: 0.7; background-color: rgb(29, 38, 113); ">
+<section class="header8 cid-qzeb925oAN mbr-fullscreen mbr-parallax-background" id="header8-14" data-rv-view="343" ng-style="{'background-image': 'url(' + vm.data.videos[0].cover_url + ')'}">
+  <div class="mbr-overlay" style="opacity: 0.7; background-color: rgb(29, 38, 113);">
   </div>
 
-  <div class="container align-center ">
-    <div class="row justify-content-center ">
-      <div class="media-container-column mbr-white col-md-10 offset-md-1 ">
-        <h1 class="mbr-section-title align-center py-2 mbr-fonts-style display-1 ">
+  <div class="container align-center">
+    <div class="row justify-content-center">
+      <div class="media-container-column mbr-white col-md-10 offset-md-1">
+        <h1 class="mbr-section-title align-center py-2 mbr-fonts-style display-1">
                 <strong>{{vm.data.videos[0].title}}</strong>
             </h1>
-        <p class="mbr-text align-center py-2 mbr-fonts-style display-5 ">
+        <p class="mbr-text align-center py-2 mbr-fonts-style display-5">
           {{vm.data.videos[0].subtitle}}
         </p>
-        <div class="mbr-media show-modal align-center py-2 " data-modal=".modalWindow ">
-          <span class="mbri-play mbr-iconfont " media-simple="true "></span>
+        <div class="mbr-media show-modal align-center py-2" data-modal=".modalWindow">
+          <span class="mbri-play mbr-iconfont" media-simple="true"></span>
         </div>
-        <div class="icon-description align-center pb-3 mbr-fonts-style display-7 ">
+        <div class="icon-description align-center pb-3 mbr-fonts-style display-7">
           Watch Video
         </div>
 
@@ -282,16 +273,15 @@
     </div>
   </div>
   <div>
-    <div class="modalWindow " style="display: none; visibility:visible ">
-      <div class="modalWindow-container ">
-        <div class="modalWindow-video-container ">
-          <div class="modalWindow-video ">
-            <ng-youtube-embed video="vm.data.videos[0].video_url " width="100% " height="450px " autoplay=false>
+    <div class="modalWindow" style="display: none; visibility:visible">
+      <div class="modalWindow-container">
+        <div class="modalWindow-video-container">
+          <div class="modalWindow-video">
+            <ng-youtube-embed video="vm.data.videos[0].video_url" width="100%" height="450px" autoplay=false>
             </ng-youtube-embed>
-            </lwyt-embed>
-            <a class="close " role="button " data-dismiss="modal ">
-                        <span aria-hidden="true " class="mbri-close mbr-iconfont closeModal "></span>
-                        <span class="sr-only ">Close</span>
+            <a class="close" role="button" data-dismiss="modal">
+                        <span aria-hidden="true" class="mbri-close mbr-iconfont closeModal"></span>
+                        <span class="sr-only">Close</span>
                     </a>
           </div>
         </div>
@@ -300,23 +290,33 @@
 
 </section>
 <!--   company benefits -->
-<section ng-if="!vm.data.benefits.length==0 " class="sc features2 cid-qyXrlBmqoE " id="features2-c " data-rv-view="947 ">
-  <div class="container-fluid " style="width: 75% ">
-    <h2 class="mbr-section-title mbr-fonts-style align-center pb-3 display-1 ">
+<section ng-if="!vm.data.benefits.length ==0" class="sc features2 cid-qyXrlBmqoE" id="features2-c" data-rv-view="947">
+  <div class="container-fluid" style="width: 75%">
+    <h2 class="mbr-section-title mbr-fonts-style align-center pb-3 display-1">
       Company <strong>Benefits</strong></h2>
 
     <!--   put ng-repeat here -->
-    <div class="media-container-row ">
-      <div class="card p-3 col-12 col-md-6 my-col " ng-repeat="benefit in vm.data.benefits ">
-        <div class="card-img pb-5 ">
+    <div class="media-container-row">
+      <div class="card p-3 col-12 col-md-6 my-col" ng-repeat="benefit in vm.data.benefits">
+        <div class="card-img pb-5">
 
           <!-- todo ng-class:benefits-->
-          <span ng-class="{ 'mbrib-calendar mbr-iconfont': benefit.icon===1, 'fa fa-medkit mbr-iconfont': benefit.icon===2, 'imind-family-sign mbr-iconfont': benefit.icon===3, 'mbrib-calendar mbr-iconfont': benefit.icon===4,
-        'icon54-v4-mariage-couple mbr-iconfont': benefit.icon===5, 'imind-family-sign mbr-iconfont':benefit.icon===6, 'icon54-v4-doctor mbr-iconfont': benefit.icon===8, 'icon54-v4-thumbs-up mbr-iconfont': benefit.icon===9, 'mbrib-calendar mbr-iconfont': benefit.icon===11,
-        'fa fa-percent mbr-iconfont': benefit.icon===13, 'icon54-v1-student mbr-iconfont':benefit.icon===15, } " style="font-size: 30px; color: rgb(255, 255, 255); " media-simple="true "></span>
+          <span ng-class="{
+            'mbrib-calendar mbr-iconfont': benefit.icon===1,
+            'fa fa-medkit mbr-iconfont': benefit.icon ===2,
+            'imind-family-sign mbr-iconfont': benefit.icon===3,
+            'mbrib-calendar mbr-iconfont': benefit.icon===4,
+            'icon54-v4-mariage-couple mbr-iconfont': benefit.icon===5,
+            'imind-family-sign mbr-iconfont':benefit.icon ===6,
+            'icon54-v4-doctor mbr-iconfont': benefit.icon===8,
+            'icon54-v4-thumbs-up mbr-iconfont': benefit.icon ===9,
+            'mbrib-calendar mbr-iconfont': benefit.icon ===11,
+            'fa fa-percent mbr-iconfont': benefit.icon===13,
+           'icon54-v1-student mbr-iconfont':benefit.icon===15,
+         }" style="font-size: 30px; color: rgb(255, 255, 255);" media-simple="true"></span>
         </div>
-        <div class="card-box ">
-          <h4 class="card-title mbr-fonts-style display-8 ">{{benefit.title}}</h4>
+        <div class="card-box">
+          <h4 class="card-title mbr-fonts-style display-8">{{benefit.title}}</h4>
         </div>
       </div>
 
@@ -325,18 +325,18 @@
 </section>
 
 <!-- public relation, in the news -->
-<section ng-if="!vm.data.news.length==0 " class="sc features14 cid-qzfC29weQ8 " id="features14-18 " data-rv-view="441 ">
-  <div class="container ">
-    <h2 class="mbr-section-title mbr-fonts-style align-center pb-3 display-1 ">
+<section ng-if="!vm.data.news.length ==0" class="sc features14 cid-qzfC29weQ8" id="features14-18" data-rv-view="441">
+  <div class="container">
+    <h2 class="mbr-section-title mbr-fonts-style align-center pb-3 display-1">
       In the <strong>News</strong></h2>
-    <div class="media-container-row ">
-      <div class="card-item p-3 col-12 col-md-6 col-lg-4 " ng-repeat="new in vm.data.news ">
-        <div class="card-box ">
-          <h4 class="card-title mbr-fonts-style mbr-bold display-7 ">
+    <div class="media-container-row">
+      <div class="card-item p-3 col-12 col-md-6 col-lg-4" ng-repeat="new in vm.data.news">
+        <div class="card-box">
+          <h4 class="card-title mbr-fonts-style mbr-bold display-7">
                     {{new.title}}
                 </h4>
           <!-- todo -->
-          <p class="mbr-text mbr-fonts-style display-7 "><a href="{{new.article_url}} " target="_blank ">Read article!</a>
+          <p class="mbr-text mbr-fonts-style display-7"><a href="{{new.article_url}}" target="_blank">Read article!</a>
           </p>
         </div>
       </div>
@@ -345,24 +345,24 @@
 </section>
 
 <!-- social media -->
-<section class="sc cid-qyXpWRtbdr " id="social-buttons2-6 " data-rv-view="950 ">
-  <div class="container ">
-    <div class="media-container-row pt-3 ">
-      <h2 class="pb-3 mbr-section-title mbr-fonts-style display-3 ">
+<section class="sc cid-qyXpWRtbdr" id="social-buttons2-6" data-rv-view="950">
+  <div class="container">
+    <div class="media-container-row pt-3">
+      <h2 class="pb-3 mbr-section-title mbr-fonts-style display-3">
             Share this page with your peers!</h2>
       <div>
-        <div class="mbr-social-likes align-items-center ">
-          <span style="visibility:hidden; " class="btn btn-social socicon-bg-facebook facebook mx-2 " title="Share link on Facebook ">
+        <div class="mbr-social-likes align-items-center">
+          <span style="visibility:hidden;" class="btn btn-social socicon-bg-facebook facebook mx-2" title="Share link on Facebook">
                 </span>
 
-          <span class="btn btn-social socicon-bg-facebook facebook mx-2 " title="Share link on Facebook ">
-                                <i class="socicon socicon-facebook "></i>
+          <span class="btn btn-social socicon-bg-facebook facebook mx-2" title="Share link on Facebook">
+                                <i class="socicon socicon-facebook"></i>
                             </span>
-          <span class="btn btn-social twitter socicon-bg-twitter mx-2 " title="Share link on Twitter ">
-                  <i class="socicon socicon-twitter "></i>
+          <span class="btn btn-social twitter socicon-bg-twitter mx-2" title="Share link on Twitter">
+                  <i class="socicon socicon-twitter"></i>
                 </span>
-          <span class="btn btn-social plusone socicon-bg-googleplus mx-2 " title="Share link on Google+ ">
-                    <i class="socicon socicon-googleplus "></i>
+          <span class="btn btn-social plusone socicon-bg-googleplus mx-2" title="Share link on Google+">
+                    <i class="socicon socicon-googleplus"></i>
         </span>
         </div>
       </div>
@@ -370,24 +370,24 @@
   </div>
 </section>
 <!-- footer -->
-<section class="sc cid-qz9woWOe8V " id="footer1-13 " data-rv-view="955 ">
-  <div class="container ">
-    <div class=" media-container-row ">
+<section class="sc cid-qz9woWOe8V" id="footer1-13" data-rv-view="955">
+  <div class="container">
+    <div class=" media-container-row">
 
-      <div class="social-list col-md-4 col-lg-4 align-center social-btns align-center ">
-        <p class="display-9 px-1 " style="margin-top:10px; ">Subscribe to us!</p>
-        <a href="https://twitter.com/hackertrail " target="_blank ">
-                <span class="px-1 socicon-twitter socicon mbr-iconfont mbr-iconfont-social "  media-simple="true "></span>
+      <div class="social-list col-md-4 col-lg-4 align-center social-btns align-center">
+        <p class="display-9 px-1" style="margin-top:10px;">Subscribe to us!</p>
+        <a href="https://twitter.com/hackertrail" target="_blank">
+                <span class="px-1 socicon-twitter socicon mbr-iconfont mbr-iconfont-social"  media-simple="true"></span>
             </a>
-        <a href="https://www.facebook.com/hackertrail/ " target="_blank ">
-                <span class="px-1 socicon-facebook socicon mbr-iconfont mbr-iconfont-social " media-simple="true "></span>
+        <a href="https://www.facebook.com/hackertrail/" target="_blank">
+                <span class="px-1 socicon-facebook socicon mbr-iconfont mbr-iconfont-social" media-simple="true"></span>
             </a>
-        <a href="https://instagram.com/hackertrail " target="_blank ">
-                <span class="px-1 socicon-instagram socicon mbr-iconfont mbr-iconfont-social " media-simple="true "></span>
+        <a href="https://instagram.com/hackertrail" target="_blank">
+                <span class="px-1 socicon-instagram socicon mbr-iconfont mbr-iconfont-social" media-simple="true"></span>
             </a>
       </div>
-      <div class="pl-0 mb-0 col-md-4 col-lg-5 copyright mb-3 mt-2 ">
-        <p class="mb-0 text-copyright mbr-fonts-style display-9 ">
+      <div class="pl-0 mb-0 col-md-4 col-lg-5 copyright mb-3 mt-2">
+        <p class="mb-0 text-copyright mbr-fonts-style display-9">
           &#169; Copyright 2017 TechKnowledgey Pte Ltd - All Rights Reserved
         </p>
       </div>
@@ -396,5 +396,6 @@
   </div>
 </section>
 
-<script src="assets/theme/js/script.js "></script>
-<script src="js/section.script.js "></script>
+
+<script src="assets/theme/js/script.js"></script>
+<script src="js/section.script.js"></script>
