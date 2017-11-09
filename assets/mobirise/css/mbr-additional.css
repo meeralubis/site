@@ -2183,7 +2183,8 @@ html, body {
     justify-content: center;
   }
   .cid-qz9tRdPZ8y img {
-    height: 1rem !important;
+    /* height: 1rem !important; */
+    margin: 0 4.5rem;
   }
   .cid-qz9tRdPZ8y .btn {
     display: flex;
