@@ -54,7 +54,7 @@
     <div class="row justify-content-center">
       <div class="media-container-column mbr-white col-md-10 offset-md-1">
         <h1 class="mbr-section-title mbr-bold pb-3 mbr-fonts-style display-1">{{vm.data.name}}</h1>
-        <div class="mbr-section-btn">
+        <div class="mbr-section-btn" ng-if="!vm.data.jobs.length==0">
           <a class="btn btn-md btn-bgr btn-primary display-4" href="index.html#table1-7">Explore Jobs<br></a>
         </div>
       </div>
@@ -285,7 +285,7 @@
 </section> -->
 
 <!-- company videos -->
-<section ng-hide="vm.data.video==0 || vm.data.video==null" class="header8 cid-qzeb925oAN mbr-fullscreen mbr-parallax-background" id="header8-14" data-rv-view="343" ng-style="{'background-image': 'url(' + vm.data.video.cover_url + ')'}">
+<section ng-hide="vm.data.video==null || vm.data.video==0" class="header8 cid-qzeb925oAN mbr-fullscreen mbr-parallax-background" id="header8-14" data-rv-view="343" ng-style="{'background-image': 'url(' + vm.data.video.cover_url + ')'}">
   <div class="mbr-overlay" style="opacity: 0.7; background-color: rgb(29, 38, 113);">
   </div>
 
