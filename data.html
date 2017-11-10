@@ -25,9 +25,9 @@
           <li class="nav-item" ng-if="!vm.data.news.length ==0">
             <a class="nav-link link mbr-black text-warning display-nav" href="index.html#features14-18">News</a>
           </li>
-          <li class="nav-item" ng-if="!vm.data.members.length ==0">
+          <!-- <li class="nav-item" ng-if="!vm.data.members.length ==0">
             <a class="nav-link link mbr-black text-warning  display-nav" href="index.html#testimonials-slider1-p">Team</a>
-          </li>
+          </li> -->
         </ul>
         <div class="navbar-buttons mbr-section-btn p3">
           <a class="display-9" style="font-weight:600; color: black; margin-bottom:2px;" href="https://www.hackertrail.com/app/login">Already a member?</a>
@@ -178,8 +178,8 @@
 <section ng-if="!vm.data.culture.length ==0" class="sc features9 cid-qyXYKRZhO8" id="features9-r" data-rv-view="933">
   <div class="container">
     <div class="container align-center">
-      <h2 class="mb-4 mbr-fonts-style display-1">Company <strong>Culture</strong></h2>
-      <h3 class="mbr-section-subtitle mbr-fonts-style align-left mb-4 mbr-light display-5" ng-bind-html="vm.data.culture">
+      <h2 class="mb-4 mbr-fonts-style display-1 visible">Company <strong>Culture</strong></h2>
+      <h3 class="mbr-section-subtitle mbr-fonts-style align-left mb-4 mbr-light display-5 visible" ng-bind-html="vm.data.culture">
       </h3>
     </div>
   </div>
@@ -189,7 +189,7 @@
 
 
 <!-- compay team -->
-<section ng-if="!vm.data.members.length==0" class="sc carousel slide testimonials-slider cid-qyXVoChDhY" id="testimonials-slider1-p" data-rv-view="939">
+<!-- <section ng-if="!vm.data.members.length==0" class="sc carousel slide testimonials-slider cid-qyXVoChDhY" id="testimonials-slider1-p" data-rv-view="939">
   <div class="container text-center">
     <h2 class="pb-5 mbr-fonts-style display-1">
         Company <strong>Team</strong></h2>
@@ -246,7 +246,7 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 <!-- company videos -->
 <section ng-hide="vm.data.videos.length==0" class="header8 cid-qzeb925oAN mbr-fullscreen mbr-parallax-background" id="header8-14" data-rv-view="343" ng-style="{'background-image': 'url(' + vm.data.videos[0].cover_url + ')'}">
@@ -292,7 +292,7 @@
 <!--   company benefits -->
 <section ng-if="!vm.data.benefits.length ==0" class="sc features2 cid-qyXrlBmqoE" id="features2-c" data-rv-view="947">
   <div class="container-fluid" style="width: 75%">
-    <h2 class="mbr-section-title mbr-fonts-style align-center pb-3 display-1">
+    <h2 class="mbr-section-title mbr-fonts-style align-center pb-3 display-1 visible">
       Company <strong>Benefits</strong></h2>
 
     <!--   put ng-repeat here -->
@@ -316,7 +316,7 @@
          }" style="font-size: 30px; color: rgb(255, 255, 255);" media-simple="true"></span>
         </div>
         <div class="card-box">
-          <h4 class="card-title mbr-fonts-style display-8">{{benefit.title}}</h4>
+          <h4 class="card-title mbr-fonts-style display-8 visible">{{benefit.title}}</h4>
         </div>
       </div>
 
@@ -327,16 +327,16 @@
 <!-- public relation, in the news -->
 <section ng-if="!vm.data.news.length ==0" class="sc features14 cid-qzfC29weQ8" id="features14-18" data-rv-view="441">
   <div class="container">
-    <h2 class="mbr-section-title mbr-fonts-style align-center pb-3 display-1">
+    <h2 class="mbr-section-title mbr-fonts-style align-center pb-3 display-1 visible">
       In the <strong>News</strong></h2>
     <div class="media-container-row">
       <div class="card-item p-3 col-12 col-md-6 col-lg-4" ng-repeat="new in vm.data.news">
         <div class="card-box">
-          <h4 class="card-title mbr-fonts-style mbr-bold display-7">
+          <h4 class="card-title mbr-fonts-style mbr-bold display-7 visible">
                     {{new.title}}
                 </h4>
           <!-- todo -->
-          <p class="mbr-text mbr-fonts-style display-7"><a href="{{new.article_url}}" target="_blank">Read article!</a>
+          <p class="mbr-text mbr-fonts-style display-7 visible"><a href="{{new.article_url}}" class="visible" target="_blank">Read article!</a>
           </p>
         </div>
       </div>
@@ -374,20 +374,20 @@
   <div class="container">
     <div class=" media-container-row">
 
-      <div class="social-list col-md-4 col-lg-4 align-center social-btns align-center">
-        <p class="display-9 px-1" style="margin-top:10px;">Subscribe to us!</p>
+      <div class="social-list col-md-4 col-lg-4 align-center social-btns align-center visible">
+        <p class="display-9 px-1 visible" style="margin-top:10px;">Subscribe to us!</p>
         <a href="https://twitter.com/hackertrail" target="_blank">
-                <span class="px-1 socicon-twitter socicon mbr-iconfont mbr-iconfont-social"  media-simple="true"></span>
+                <span class="px-1 socicon-twitter socicon mbr-iconfont mbr-iconfont-social visible"  media-simple="true"></span>
             </a>
         <a href="https://www.facebook.com/hackertrail/" target="_blank">
-                <span class="px-1 socicon-facebook socicon mbr-iconfont mbr-iconfont-social" media-simple="true"></span>
+                <span class="px-1 socicon-facebook socicon mbr-iconfont mbr-iconfont-social visible" media-simple="true"></span>
             </a>
         <a href="https://instagram.com/hackertrail" target="_blank">
-                <span class="px-1 socicon-instagram socicon mbr-iconfont mbr-iconfont-social" media-simple="true"></span>
+                <span class="px-1 socicon-instagram socicon mbr-iconfont mbr-iconfont-social visible" media-simple="true"></span>
             </a>
       </div>
       <div class="pl-0 mb-0 col-md-4 col-lg-5 copyright mb-3 mt-2">
-        <p class="mb-0 text-copyright mbr-fonts-style display-9">
+        <p class="mb-0 text-copyright mbr-fonts-style display-9 visible">
           &#169; Copyright 2017 TechKnowledgey Pte Ltd - All Rights Reserved
         </p>
       </div>
@@ -395,7 +395,12 @@
     </div>
   </div>
 </section>
+<div id="scrollToTop" class="scrollToTop mbr-arrow-up">
+  <a style="text-align: center;"><i class="mbri-down mbr-iconfont"></i>
+  </a>
+</div>
+<input name="animation" type="hidden">
 
+<script src="js/section.script.js"></script>
 
 <script src="assets/theme/js/script.js"></script>
-<script src="js/section.script.js"></script>

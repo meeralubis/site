@@ -1551,7 +1551,7 @@ html, body {
 .cid-qyXpWRtbdr {
   padding-top: 45px;
   padding-bottom: 45px;
-  /*   background-color: #f8f8f8; */
+  /* background-color: #f8f8f8; */
 }
 
 @media (min-width: 400px) {
@@ -2469,4 +2469,8 @@ html, body {
   .cid-qzfC29weQ8 .card-item .card-icon span {
     font-size: 3rem;
   }
+}
+
+.visible-yes {
+  visibility: visible !important;
 }
