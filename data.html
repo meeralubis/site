@@ -143,24 +143,60 @@
   <div class="full-screen">
     <div class="mbr-slider slide carousel">
       <div class="carousel-inner" role="listbox">
+
+        <!-- office image -->
         <div class="carousel-item active">
           <div class="mbr-overlay" style="opacity: 0.4;"></div>
-          <!-- <img class="d-block img-fluid" style="width:100%" src="assets/images/t1.jpg" alt="First slide"> -->
           <img class="d-block img-fluid" style="width:100%" ng-src="{{vm.data.photos[0].image}}" alt="First slide">
           <div class="carousel-caption d-none d-md-block">
             <h3>{{vm.data.photos[0].title}}</h3>
             <p>{{vm.data.photos[0].subtitle}}</p>
           </div>
         </div>
+        <!-- /office image -->
+
         <div class="carousel-item">
-          <div class="mbr-overlay" style="opacity: 0.4;"></div>
-          <!-- <img class="d-block img-fluid" style="width:100%" src="assets/images/t2.jpg" alt="Second slide"> -->
+          <div class="mbr-overlay" style="opacity: 0.4;" ng-if="!vm.data.photos[1].length==0"></div>
           <img class="d-block img-fluid" style="width:100%" ng-src="{{vm.data.photos[1].image}}" alt="Second slide">
           <div class="carousel-caption d-none d-md-block">
             <h3>{{vm.data.photos[1].title}}</h3>
             <p>{{vm.data.photos[1].subtitle}}</p>
           </div>
         </div>
+
+        <!-- office image -->
+        <div class="carousel-item"  >
+          <div class="mbr-overlay" style="opacity: 0.4;" ng-if="!vm.data.photos[2].length==0"></div>
+          <img class="d-block img-fluid" style="width:100%"  ng-src="{{vm.data.photos[0].image}}" alt="First slide">
+          <div class="carousel-caption d-none d-md-block">
+            <h3>{{vm.data.photos[0].title}}</h3>
+            <p>{{vm.data.photos[0].subtitle}}</p>
+          </div>
+        </div>
+        <!-- /office image -->
+
+      <!-- office image -->
+      <div class="carousel-item">
+        <div class="mbr-overlay" style="opacity: 0.4;" ng-if="!vm.data.photos[3].length==0"></div>
+        <img class="d-block img-fluid" style="width:100%" ng-src="{{vm.data.photos[0].image}}" alt="First slide">
+        <div class="carousel-caption d-none d-md-block">
+          <h3>{{vm.data.photos[0].title}}</h3>
+          <p>{{vm.data.photos[0].subtitle}}</p>
+        </div>
+      </div>
+      <!-- /office image -->
+
+      <!-- office image -->
+      <div class="carousel-item">
+        <div class="mbr-overlay" style="opacity: 0.4;" ng-if="!vm.data.photos[4].length==0"></div>
+        <img class="d-block img-fluid" style="width:100%" ng-src="{{vm.data.photos[0].image}}" alt="First slide">
+        <div class="carousel-caption d-none d-md-block">
+          <h3>{{vm.data.photos[0].title}}</h3>
+          <p>{{vm.data.photos[0].subtitle}}</p>
+        </div>
+      </div>
+      <!-- /office image -->
+
       </div>
       <a class="carousel-control-prev" data-target="#slider1-t" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -179,7 +215,7 @@
   <div class="container">
     <div class="container align-center">
       <h2 class="mb-4 mbr-fonts-style display-1 visible">Company <strong>Culture</strong></h2>
-      <h3 class="mbr-section-subtitle mbr-fonts-style align-left mb-4 mbr-light display-5 visible" ng-bind-html="vm.data.culture">
+      <h3 class="mbr-section-subtitle mbr-fonts-style align-left mb-4 mbr-light display-5" style="visibility:visible" ng-bind-html="vm.data.culture">
       </h3>
     </div>
   </div>
