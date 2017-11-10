@@ -75,14 +75,14 @@
 <!-- open jobs -->
 <section ng-if="!vm.data.jobs.length==0" class="sc section-table cid-qyXpXflzFJ" id="table1-7" data-rv-view="875">
   <div class="container">
-    <h2 class="mbr-section-title mbr-fonts-style align-center pb-3 display-1">
+    <h2 class="mbr-section-title mbr-fonts-style align-center pb-3 display-1 visible">
       Open <strong>Jobs</strong></h2>
     <!-- input search location -->
-    <div class="input-group" style="width:96% !important">
-      <span class="input-group-addon">
+    <div class="input-group visible" style="width:96% !important">
+      <span class="input-group-addon visible">
         <span class="icon54-v4-search mbr-iconfont" style="font-size: 30px; color: black;"></span>
       </span>
-      <input type="text" ng-model="search.location" class="form-control" placeholder="Location">
+      <input type="text" ng-model="search.location" class="form-control visible" placeholder="Location">
     </div>
     <div class="table-wrapper" style="padding-top:30px">
       <div class="table-responsive">
