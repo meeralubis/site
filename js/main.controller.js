@@ -13,6 +13,8 @@
         vm.selectJob = function(job) {
           vm.selectedJob = job
         };
+
+
       };
 
       init();

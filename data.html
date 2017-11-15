@@ -131,7 +131,9 @@
       <div class="display-8" ng-model="selectedJob" ng-bind-html="vm.selectedJob.requirements"></div>
     </div>
     <div class="modal-footer" style="visibility: visible;">
-      <button type="button" style="visibility: visible;" class="display-8 btn btn-primary btn-sm">Apply Now!</button>
+      <!-- todo job apply -->
+      <a class="btn btn-primary btn-sm visibility:visible" ng-href="https://app.hackertrail.com/openjobs/company/{{vm.data.slug}}/job/{{vm.selectedJob.slug}}">Apply Now!<a>
+
     </div>
   </div>
   </div>
