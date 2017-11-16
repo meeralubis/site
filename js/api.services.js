@@ -12,7 +12,7 @@
         }
       };
     };
-    return angular.module('microApp').factory('DataService', DataService);
+    return angular.module('myApp').factory('DataService', DataService);
   })();
 
 }).call(this);

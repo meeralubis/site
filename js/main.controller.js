@@ -14,11 +14,10 @@
           vm.selectedJob = job
         };
       };
-
       init();
     };
 
-    return angular.module('microApp').controller('MainController', MainController);
+    return angular.module('myApp').controller('MainController', MainController);
   })();
 
 }).call(this);
